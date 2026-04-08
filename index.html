@@ -22,33 +22,49 @@
 
     <!-- Navbar -->
     <nav class="glass fixed w-full z-50 border-b border-red-100">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="text-2xl font-bold text-red-600 leading-none uppercase tracking-tighter">Smart Kitchen</span>
-                <span class="text-[9px] text-gray-500 font-bold tracking-[0.2em] mt-1">FSSAI REG: 21119239000416</span>
-            </div>
-            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
-                <a href="#menu" class="hover:text-red-600 transition">The Menu</a>
-                <a href="#plans" class="hover:text-red-600 transition">Pricing</a>
-                <a href="#contact" class="hover:text-red-600 transition">Contact</a>
-            </div>
-            <a href="https://wa.me/919470356191" class="bg-red-600 text-white px-6 py-2.5 rounded-full font-bold text-sm hover:bg-slate-900 transition flex items-center shadow-lg shadow-red-200">
-                <i class="fab fa-whatsapp mr-2 text-lg"></i> Subscribe
-            </a>
+    <div class="max-w-7xl mx-auto px-4 md:px-4 md:px-6 h-20 flex justify-between items-center">
+        
+        <div class="flex flex-col">
+            <span class="text-xl md:text-2xl font-bold text-red-600 leading-none uppercase tracking-tighter">Smart Kitchen</span>
+            <span class="text-[8px] md:text-[9px] text-gray-500 font-bold tracking-[0.2em] mt-1">FSSAI REG: 21119239000416</span>
         </div>
-    </nav>
+
+        <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
+            <a href="#menu">The Menu</a>
+            <a href="#plans">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="flex items-center space-x-2">
+            <a href="https://wa.me/919470356191" class="hidden sm:flex bg-red-600 text-white px-4 md:px-4 md:px-6 py-2 rounded-full font-bold text-xs md:text-sm">
+                Subscribe
+            </a>
+
+            <button id="menu-btn" class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden px-4 md:px-6 pb-6 space-y-4 font-semibold uppercase text-sm">
+        <a href="#menu" class="block">The Menu</a>
+        <a href="#plans" class="block">Pricing</a>
+        <a href="#contact" class="block">Contact</a>
+        <a href="https://wa.me/919470356191" class="block bg-red-600 text-white px-4 py-2 rounded-full text-center">Subscribe</a>
+    </div>
+</nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 overflow-hidden">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section class="relative pt-28 md:pt-32 pb-16 md:pb-20 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <div class="inline-flex items-center space-x-2 bg-red-50 px-3 py-1 rounded-full mb-6">
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     <span class="text-xs font-bold text-red-600 uppercase tracking-widest">Accepting New Subscriptions</span>
                 </div>
-                <h1 class="text-5xl lg:text-7xl font-bold mb-6 leading-tight">Ghar Jaisa Swad, <br><span class="text-red-600 italic">Chef Style</span> Presentation.</h1>
-                <p class="text-lg text-slate-600 mb-10 leading-relaxed max-w-xl">We don't just deliver food; we deliver health and nostalgia. Prepared with premium oils and farm-fresh vegetables daily.</p>
-                <div class="flex flex-wrap gap-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">Ghar Jaisa Swad, <br><span class="text-red-600 italic">Chef Style</span> Presentation.</h1>
+                <p class="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl">We don't just deliver food; we deliver health and nostalgia. Prepared with premium oils and farm-fresh vegetables daily.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#menu" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-xl">View Weekly Menu</a>
                     <div class="flex items-center space-x-4 border-l pl-6 border-slate-200">
                         <p class="text-sm font-bold leading-tight">Call for Inquiry:<br><span class="text-red-600 text-lg">9470356191</span></p>
@@ -57,14 +73,14 @@
             </div>
             <div class="relative group">
                 <div class="absolute -inset-4 bg-red-100 rounded-[3rem] -rotate-3 transition group-hover:rotate-0"></div>
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Premium Food" class="relative rounded-[2.5rem] shadow-2xl object-cover h-[500px] w-full">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Premium Food" class="relative rounded-[2.5rem] shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[500px] w-full">
             </div>
         </div>
     </section>
 
     <!-- Menu Section -->
     <section id="menu" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Explore the Weekly Menu</h2>
                 
@@ -77,14 +93,14 @@
                 </div>
 
                 <!-- Day Selector -->
-                <div class="flex flex-wrap justify-center gap-2 md:gap-4" id="day-tabs">
-                    <button onclick="changeDay('mon')" class="day-btn tab-active px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
-                    <button onclick="changeDay('tue')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Tue</button>
-                    <button onclick="changeDay('wed')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Wed</button>
-                    <button onclick="changeDay('thu')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Thu</button>
-                    <button onclick="changeDay('fri')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Fri</button>
-                    <button onclick="changeDay('sat')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sat</button>
-                    <button onclick="changeDay('sun')" class="day-btn px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sun</button>
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto pb-2" id="day-tabs">
+                    <button onclick="changeDay('mon')" class="day-btn tab-active px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
+                    <button onclick="changeDay('tue')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Tue</button>
+                    <button onclick="changeDay('wed')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Wed</button>
+                    <button onclick="changeDay('thu')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Thu</button>
+                    <button onclick="changeDay('fri')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Fri</button>
+                    <button onclick="changeDay('sat')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sat</button>
+                    <button onclick="changeDay('sun')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sun</button>
                 </div>
             </div>
 
@@ -105,7 +121,7 @@
 
     <!-- Subscription Plans -->
     <section id="plans" class="py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
             <h2 class="text-4xl font-bold text-center mb-16">Choose Your Smart Plan</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Basic Plan -->
@@ -121,7 +137,7 @@
                 </div>
                 <!-- Executive Plan -->
                 <div class="bg-white p-10 rounded-[2.5rem] border-2 border-red-500 shadow-2xl relative overflow-hidden group">
-                    <div class="absolute top-0 right-0 bg-red-500 text-white px-6 py-2 rounded-bl-2xl font-bold text-xs uppercase">Bestseller</div>
+                    <div class="absolute top-0 right-0 bg-red-500 text-white px-4 md:px-6 py-2 rounded-bl-2xl font-bold text-xs uppercase">Bestseller</div>
                     <h3 class="text-2xl font-bold mb-4 italic">Executive (The Royal Feast)</h3>
                     <p class="text-slate-500 mb-8">For those who want variety, luxury, and extra appetite.</p>
                     <ul class="space-y-4 mb-10">
@@ -137,9 +153,9 @@
 
     <!-- Gallery Section -->
     <section class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
             <h2 class="text-3xl font-bold mb-12">From Our Kitchen</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
                 <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=400&q=80" class="rounded-3xl h-64 w-full object-cover">
                 <img src="https://images.unsplash.com/photo-1601050638917-3d873bc7012f?auto=format&fit=crop&w=400&q=80" class="rounded-3xl h-64 w-full object-cover mt-8">
                 <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=400&q=80" class="rounded-3xl h-64 w-full object-cover">
@@ -149,7 +165,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact" class="bg-slate-900 text-white py-20 px-6">
+    <footer id="contact" class="bg-slate-900 text-white py-20 px-4 md:px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 border-b border-slate-800 pb-16 mb-16">
             <div>
                 <h3 class="text-2xl font-bold text-red-500 uppercase mb-6 tracking-tighter">Smart Kitchen</h3>
@@ -265,6 +281,9 @@
 
         // Init
         updateMenuDisplay();
+		document.getElementById('menu-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+});
     </script>
 </body>
 </html>
