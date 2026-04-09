@@ -30,15 +30,16 @@
         </div>
 
         <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-widest">
-            <a href="#menu">The Menu</a>
+            <a href="#menu">Menu</a>
             <a href="#plans">Pricing</a>
             <a href="#contact">Contact</a>
         </div>
 
         <div class="flex items-center space-x-2">
-            <a href="https://wa.me/919470356191" class="hidden sm:flex bg-red-600 text-white px-4 md:px-4 md:px-6 py-2 rounded-full font-bold text-xs md:text-sm">
-                Subscribe
-            </a>
+            <a href="https://wa.me/919470356191" class="hidden sm:flex bg-red-600 text-white px-6 py-2 rounded-full font-bold text-sm items-center gap-2">
+    <i class="fab fa-whatsapp"></i>
+    <span>Chat on WhatsApp</span>
+</a>
 
             <button id="menu-btn" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
@@ -50,7 +51,7 @@
         <a href="#menu" class="block">The Menu</a>
         <a href="#plans" class="block">Pricing</a>
         <a href="#contact" class="block">Contact</a>
-        <a href="https://wa.me/919470356191" class="block bg-red-600 text-white px-4 py-2 rounded-full text-center">Subscribe</a>
+        <a href="https://wa.me/919470356191" class="block bg-red-600 text-white px-4 py-2 rounded-full text-center">WhatsApp for Inquiry & Subcriptions</a>
     </div>
 </nav>
 
@@ -62,8 +63,8 @@
                     <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
                     <span class="text-xs font-bold text-red-600 uppercase tracking-widest">Accepting New Subscriptions</span>
                 </div>
-                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">Ghar Jaisa Swad, <br><span class="text-red-600 italic">Chef Style</span> Presentation.</h1>
-                <p class="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl">We don't just deliver food; we deliver health and nostalgia. Prepared with premium oils and farm-fresh vegetables daily.</p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight">Swad <br><span class="text-red-600 italic">Ghar Ka,</span> Style Professional.</h1>
+                <p class="text-base md:text-lg text-slate-600 mb-8 md:mb-10 leading-relaxed max-w-xl">We don’t just serve food—we serve a feeling of home, comfort, and care. Every meal is prepared daily using good-quality oils, fresh farm vegetables, and quality, hygienically sourced meat, so you can enjoy not just great taste but peace of mind. With every bite, we hope to bring you warmth, nourishment, and a little reminder of home.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#menu" class="bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition shadow-xl">View Weekly Menu</a>
                     <div class="flex items-center space-x-4 border-l pl-6 border-slate-200">
@@ -72,8 +73,8 @@
                 </div>
             </div>
             <div class="relative group">
-                <div class="absolute -inset-4 bg-red-100 rounded-[3rem] -rotate-3 transition group-hover:rotate-0"></div>
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Premium Food" class="relative rounded-[2.5rem] shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[500px] w-full">
+                <div class="absolute -inset-4 bg-gradient-to-r from-[#FFE5B4] to-[#FFD6A5] rounded-[3rem] -rotate-3 transition group-hover:rotate-0"></div>
+                <img src="https://res.cloudinary.com/dikxsik7r/image/upload/v1775730757/thali_v0mcje.png" alt="Premium Food" class="relative rounded-[2.5rem] shadow-2xl object-cover h-[300px] sm:h-[400px] md:h-[500px] w-full">
             </div>
         </div>
     </section>
@@ -87,27 +88,39 @@
                 <!-- Tier Switcher -->
                 <div class="flex justify-center mb-10">
                     <div class="bg-slate-100 p-1.5 rounded-2xl inline-flex shadow-inner">
-                        <button onclick="switchTier('basic')" id="btn-basic" class="tier-toggle px-8 py-3 rounded-xl font-bold text-sm uppercase transition active tab-active">Standard Plan</button>
-                        <button onclick="switchTier('premium')" id="btn-premium" class="tier-toggle px-8 py-3 rounded-xl font-bold text-sm uppercase transition">Executive Plan (Royal)</button>
+                        <button onclick="switchTier('basic')" id="btn-basic" class="tier-toggle tab-active px-6 py-3 rounded-xl font-bold text-sm uppercase">Basic</button>
+
+<button onclick="switchTier('executive')" id="btn-executive" class="tier-toggle px-6 py-3 rounded-xl font-bold text-sm uppercase">Executive</button>
+
+<button onclick="switchTier('deluxe')" id="btn-deluxe" class="tier-toggle px-6 py-3 rounded-xl font-bold text-sm uppercase">Deluxe</button>
                     </div>
                 </div>
 
                 <!-- Day Selector -->
                 <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto pb-2" id="day-tabs">
-                    <button onclick="changeDay('mon')" class="day-btn tab-active px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
-                    <button onclick="changeDay('tue')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Tue</button>
-                    <button onclick="changeDay('wed')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Wed</button>
-                    <button onclick="changeDay('thu')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Thu</button>
-                    <button onclick="changeDay('fri')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Fri</button>
-                    <button onclick="changeDay('sat')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sat</button>
-                    <button onclick="changeDay('sun')" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sun</button>
+                    <button onclick="changeDay('mon', this)" class="day-btn tab-active px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
+                    <button onclick="changeDay('tue', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Tue</button>
+                    <button onclick="changeDay('wed', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Wed</button>
+                    <button onclick="changeDay('thu', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Thu</button>
+                    <button onclick="changeDay('fri', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Fri</button>
+                    <button onclick="changeDay('sat', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sat</button>
+                    <button onclick="changeDay('sun', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sun</button>
                 </div>
             </div>
 
-            <!-- Menu Grid -->
-            <div id="menu-display" class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Javascript will inject meal cards here -->
-            </div>
+<!-- Meal Filter Buttons -->
+<div id="dynamic-price" class="text-center text-2xl font-bold text-red-600 mt-4"></div>
+<div id="selection-summary" class="text-center text-sm text-slate-600 mt-2 font-semibold"></div>
+
+<div class="flex justify-center gap-3 mb-8 flex-wrap">
+    <button onclick="setMealFilter('all', this)" class="meal-filter tab-active px-4 py-2 rounded-full border font-bold text-sm">Full Day</button>
+	<button onclick="setMealFilter('ld', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch + Dinner</button>
+    <button onclick="setMealFilter('l', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch Only</button>
+    <button onclick="setMealFilter('d', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Dinner Only</button>
+</div>
+
+<!-- Menu Cards -->
+<div id="menu-display" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-4">
             
             <div class="mt-16 bg-red-50 p-6 rounded-3xl flex items-center justify-between flex-wrap gap-4 border border-red-100">
                 <div class="flex items-center space-x-4">
@@ -123,30 +136,103 @@
     <section id="plans" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <h2 class="text-4xl font-bold text-center mb-16">Choose Your Smart Plan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Basic Plan -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group">
-                    <h3 class="text-2xl font-bold mb-4 italic">Standard (Daily Comfort)</h3>
+                <div id="plan-basic" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group">
+                    <h3 class="text-2xl font-bold mb-4 italic">Basic (Daily Comfort)</h3>
+					<p id="price-basic" class="text-4xl font-bold text-red-600 mb-2">
+    ₹3000 <span class="text-sm text-slate-500">/month</span>
+</p>
+<p id="plan-type-basic" class="text-xs text-slate-500 mb-6">
+    Full Day (Breakfast + Lunch + Dinner)
+</p>
                     <p class="text-slate-500 mb-8">Home-style cooking for your daily nutritional needs.</p>
                     <ul class="space-y-4 mb-10">
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-500"></i> <span>Breakfast + Lunch + Dinner</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-500"></i> <span>Fixed Weekly Menu</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-check-circle text-green-500"></i> <span>Free Eco-friendly Delivery</span></li>
-                    </ul>
-                    <button class="w-full py-4 rounded-2xl bg-slate-100 text-slate-900 font-bold group-hover:bg-slate-900 group-hover:text-white transition uppercase tracking-widest text-sm">Subscribe Now</button>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-check text-green-500"></i>
+        <span>Freshly prepared meals every day</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-check text-green-500"></i>
+        <span>Consistent taste & balanced nutrition</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-check text-green-500"></i>
+        <span>Clean, hygienic cooking standards</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-check text-green-500"></i>
+        <span>Reliable daily delivery (no missed meals)</span>
+    </li>
+</ul>
+                    <button onclick="orderNow('basic')" class="w-full py-4 rounded-2xl bg-slate-100 text-slate-900 font-bold group-hover:bg-slate-900 group-hover:text-white transition uppercase tracking-widest text-sm">Subscribe Now</button>
                 </div>
                 <!-- Executive Plan -->
-                <div class="bg-white p-10 rounded-[2.5rem] border-2 border-red-500 shadow-2xl relative overflow-hidden group">
+                <div id="plan-executive" class="bg-white p-10 rounded-[2.5rem] border-2 border-red-500 shadow-2xl relative overflow-hidden group">
                     <div class="absolute top-0 right-0 bg-red-500 text-white px-4 md:px-6 py-2 rounded-bl-2xl font-bold text-xs uppercase">Bestseller</div>
                     <h3 class="text-2xl font-bold mb-4 italic">Executive (The Royal Feast)</h3>
+					<p id="price-executive" class="text-4xl font-bold text-red-600 mb-2">
+    ₹3900 <span class="text-sm text-slate-500">/month</span>
+</p>
+<p id="plan-type-executive" class="text-xs text-slate-500 mb-6">
+    Full Day Premium Plan
+</p>
                     <p class="text-slate-500 mb-8">For those who want variety, luxury, and extra appetite.</p>
                     <ul class="space-y-4 mb-10">
-                        <li class="flex items-center space-x-3"><i class="fas fa-plus-circle text-red-500"></i> <span class="font-bold">Daily Sweet Dish & Appetizers</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-plus-circle text-red-500"></i> <span>Choice of Special Raita/Salads</span></li>
-                        <li class="flex items-center space-x-3"><i class="fas fa-plus-circle text-red-500"></i> <span>Flexi-Pause (Skip days anytime)</span></li>
-                    </ul>
-                    <button class="w-full py-4 rounded-2xl bg-red-600 text-white font-bold hover:bg-slate-900 transition uppercase tracking-widest text-sm shadow-xl shadow-red-200">Go Executive</button>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-plus text-red-500"></i>
+        <span>More variety across the week (less repetition)</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-plus text-red-500"></i>
+        <span>Flexible meal management (skip/pause anytime)</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-plus text-red-500"></i>
+        <span>Better portion control & satisfaction</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-plus text-red-500"></i>
+        <span>Priority preparation for improved freshness</span>
+    </li>
+</ul>
+                    <button onclick="orderNow('executive')" class="w-full py-4 rounded-2xl bg-red-600 text-white font-bold hover:bg-slate-900 transition uppercase tracking-widest text-sm shadow-xl shadow-red-200">Go Executive</button>
                 </div>
+				
+				<!-- Deluxe Plan -->
+				<div id="plan-deluxe" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group">
+    <h3 class="text-2xl font-bold mb-4 italic">Deluxe (Ultimate Experience)</h3>
+
+    <p id="price-deluxe" class="text-4xl font-bold text-red-600 mb-2">
+        ₹4800 <span class="text-sm text-slate-500">/month</span>
+    </p>
+    <p id="plan-type-deluxe" class="text-xs text-slate-500 mb-6">
+        Luxury Full Day Plan
+    </p>
+
+    <ul class="space-y-4 mb-10">
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-crown text-yellow-500"></i>
+        <span>Maximum variety with premium meal planning</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-crown text-yellow-500"></i>
+        <span>Personalized preferences & priority handling</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-crown text-yellow-500"></i>
+        <span>Enhanced portion & overall meal experience</span>
+    </li>
+    <li class="flex items-center space-x-3">
+        <i class="fas fa-crown text-yellow-500"></i>
+        <span>Highest priority delivery & service support</span>
+    </li>
+</ul>
+
+    <button onclick="orderNow('deluxe')" class="w-full py-4 rounded-2xl bg-slate-900 text-white font-bold">
+        Go Deluxe
+    </button>
+</div>
             </div>
         </div>
     </section>
@@ -183,7 +269,10 @@
             </div>
             <div>
                 <h4 class="text-lg font-bold mb-6">Contact Us</h4>
-                <p class="text-slate-400 mb-4 font-bold text-xl">+91 9470356191</p>
+                <a href="https://wa.me/916206458231" class="flex items-center gap-2 text-slate-400 mb-4 font-bold text-xl hover:text-green-500">
+    <i class="fab fa-whatsapp"></i>
+    <span>+91 6206458231</span>
+</a>
                 <p class="text-slate-400 mb-6">Serving across the city center. Hot & Fresh delivery within 45 mins of preparation.</p>
                 <div class="flex space-x-4">
                     <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-red-600 transition"><i class="fab fa-facebook-f"></i></a>
@@ -197,93 +286,355 @@
     <script>
         let currentTier = 'basic';
         let currentDay = 'mon';
+		
+		let mealFilter = 'all';
+
+function setMealFilter(type, el) {
+    mealFilter = type;
+
+    document.querySelectorAll('.meal-filter').forEach(btn => btn.classList.remove('tab-active'));
+    el.classList.add('tab-active');
+
+    updateMenuDisplay();
+    updatePriceDisplay();
+    updatePlanPrices();
+	updateSelectionSummary();
+	updatePlanTypeText();
+}
+
+function getPrice(tier, mealType) {
+    const pricing = {
+        basic: {
+            all: 3000,
+            ld: 2200,
+            l: 1500,
+            d: 1500
+        },
+        executive: {
+            all: 3600,   // cheaper than 1950+1950
+            ld: 3000,
+            l: 2000,
+            d: 2000
+        },
+        deluxe: {
+            all: 4500,
+            ld: 3800,
+            l: 2500,
+            d: 2500
+        }
+    };
+
+    return pricing[tier][mealType];
+}
+
+function calculateSavings(tier) {
+    const full = getPrice(tier, 'all');
+    const lunch = getPrice(tier, 'l');
+    const dinner = getPrice(tier, 'd');
+
+    const separateTotal = lunch + dinner;
+
+    return separateTotal - full;
+}
+
+function updatePriceDisplay() {
+    const price = getPrice(currentTier, mealFilter);
+    const savings = calculateSavings(currentTier);
+
+    let text = `₹${price} / month`;
+
+    if (mealFilter === 'all' && savings >= 0) {
+	text += `  (~₹${Math.round(price/30)}/day)`;
+}
+
+    document.getElementById('dynamic-price').innerText = text;
+}
+
+function updatePlanTypeText() {
+    const mealMap = {
+        all: "Full Day (Breakfast + Lunch + Dinner)",
+        ld: "Lunch + Dinner",
+        l: "Lunch Only",
+        d: "Dinner Only"
+    };
+
+    document.getElementById('plan-type-basic').innerText = mealMap[mealFilter];
+    document.getElementById('plan-type-executive').innerText = mealMap[mealFilter];
+    document.getElementById('plan-type-deluxe').innerText = mealMap[mealFilter];
+}
+
+function updateSelectionSummary() {
+    const mealMap = {
+        all: "Full Day",
+        ld: "Lunch + Dinner",
+        l: "Lunch Only",
+        d: "Dinner Only"
+    };
+
+    const text = `Selected: ${currentTier.toUpperCase()} • ${mealMap[mealFilter]}`;
+
+    document.getElementById('selection-summary').innerText = text;
+}
 
         const menu = {
-            mon: {
-                basic: { b: "Idli, Chutney / Sambhar", l: "Rice, Dal, Sabji Salad / Chips", d: "Roti / Chicken Chilli / Paneer Masala" },
-                premium: { b: "Idli, Vada, Sambhar + Filter Coffee", l: "Rice, Dal, 2 Sabji, Salad, Papad + Curd", d: "Roti / Butter Chicken / Shahi Paneer + Gulab Jamun" }
-            },
-            tue: {
-                basic: { b: "Puri, Aloo Chana Sabji", l: "Rice, Dal, Sabji, Chips / Salad", d: "Roti, Sabji" },
-                premium: { b: "Puri, Aloo Chana Sabji + Seasonal Fruits", l: "Rice, Dal, Sabji, Raita, Pickle + Papad", d: "Roti, Seasonal Sabji + Dal Makhani + Kheer" }
-            },
-            wed: {
-                basic: { b: "Roti, Bhujia", l: "Rice, Dal, Egg Curry / Sabji", d: "Sattu Puri, Aloo Chana Sabji" },
-                premium: { b: "Roti, Bhujia + Boiled Egg / Fruit Juice", l: "Veg Pulao, Dal Fry, Egg Curry / Paneer + Sweet", d: "Sattu Puri, Aloo Chana Sabji + Roasted Papad" }
-            },
-            thu: {
-                basic: { b: "Bread Sandwich", l: "Veg Fried Rice, Dal Fry, Chips / Salad", d: "Paratha Sabji" },
-                premium: { b: "Grilled Cheese Sandwich + Cold Coffee", l: "Fried Rice, Dal Tadka, Chilli Paneer + Spring Roll", d: "Aloo Paratha (2) + Curd / Pickle + Moong Dal Halwa" }
-            },
-            fri: {
-                basic: { b: "Pasta / Poha, Tomato Ketchup", l: "Rice, Dal, Fish Curry / Chana Paneer Sabji", d: "Roti Sabji" },
-                premium: { b: "Masala Poha + Jalebi / Juice", l: "Jeera Rice, Fish Curry / Kadai Paneer + Mix Raita", d: "Missi Roti, Sabji + Corn Soup" }
-            },
-            sat: {
-                basic: { b: "Roti, Aloo Sabji", l: "Dal Khichdi, Aloo Choka / Pickle / Chips", d: "Roti, Veg Manchurian / Paneer Sabji" },
-                premium: { b: "Roti, Aloo Sabji + Curd", l: "Ghee Khichdi, 3 types of Bharta + Curd + Sweet", d: "Roti, Manchurian, Fried Rice + Ice Cream" }
-            },
-            sun: {
-                basic: { b: "Veg Chowmein", l: "Veg Fried Rice / Jeera Rice, Chicken / Paneer", d: "Chola Bhatura / Puri Chana Masala" },
-                premium: { b: "Paneer Chowmein / Sandwich + Beverage", l: "Dum Biryani (Chicken/Veg), Raita + Cold Drink", d: "Chola Bhatura, Salad + Lassi / Rasmalai" }
-            }
-        };
+mon: {
+    basic: {
+        b: { text: "Idli with Coconut Chutney", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Steamed Rice, Dal Tadka, Seasonal Vegetable", img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Roti with Paneer Masala", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Idli, Medu Vada & Sambar", img: "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice, Dal, Two Vegetables, Salad & Curd", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Butter Chicken or Shahi Paneer", img: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "South Indian Breakfast with Juice & Fruits", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Jeera Rice, Dal Makhani, Paneer Special", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Butter Naan with Chicken Curry or Paneer", img: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=600&q=80" }
+    }
+},
 
-        const mealImages = {
-            b: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
-            l: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80",
-            d: "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?auto=format&fit=crop&w=600&q=80"
-        };
+tue: {
+    basic: {
+        b: { text: "Puri with Aloo Sabji", img: "https://images.unsplash.com/photo-1626132647523-66a0c5b6c3a3?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice, Dal, Seasonal Vegetable", img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Roti with Mixed Vegetable Curry", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Puri with Fruits", img: "https://images.unsplash.com/photo-1626132647523-66a0c5b6c3a3?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice, Dal, Veg, Raita & Papad", img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Paneer Butter Masala & Kheer", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Puri, Juice & Fruits", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Jeera Rice, Paneer Special", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Butter Naan & Paneer Lababdar", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+    }
+},
 
-        function switchTier(tier) {
-            currentTier = tier;
-            document.getElementById('btn-basic').classList.remove('tab-active');
-            document.getElementById('btn-premium').classList.remove('tab-active');
-            document.getElementById('btn-' + tier).classList.add('tab-active');
-            updateMenuDisplay();
-        }
+wed: {
+    basic: {
+        b: { text: "Roti with Aloo Bhujia", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice, Dal, Egg Curry", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Sattu Puri", img: "https://images.unsplash.com/photo-1626132647523-66a0c5b6c3a3?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Roti Bhujia & Egg", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Veg Pulao, Dal Fry", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Sattu Puri Meal", img: "https://images.unsplash.com/photo-1626132647523-66a0c5b6c3a3?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Healthy Breakfast", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Dal Makhani & Paneer", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Stuffed Paratha", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    }
+},
 
-        function changeDay(day) {
-            currentDay = day;
-            document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('tab-active'));
-            event.target.classList.add('tab-active');
-            updateMenuDisplay();
-        }
+thu: {
+    basic: {
+        b: { text: "Vegetable Sandwich", img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Veg Fried Rice", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Paratha", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Grilled Sandwich", img: "https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Chilli Paneer & Rice", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Aloo Paratha", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Sandwich, Juice & Fruits", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Paneer Premium Meal", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Stuffed Paratha & Dessert", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    }
+},
+
+fri: {
+    basic: {
+        b: { text: "Masala Poha", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice, Dal, Fish or Paneer", img: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Roti Sabji", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Poha & Jalebi", img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Jeera Rice & Paneer", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Missi Roti", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Healthy Breakfast", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Premium Paneer Meal", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Paneer Dinner", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+    }
+},
+
+sat: {
+    basic: {
+        b: { text: "Roti with Aloo Sabji", img: "https://images.unsplash.com/photo-1628294895950-9805252327bc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Dal Khichdi", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Manchurian", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Roti & Curd", img: "https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Ghee Khichdi", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Manchurian & Ice Cream", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Breakfast Combo", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Paneer Meal", img: "https://images.unsplash.com/photo-1626500154746-893c9c6e3e92?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Fried Rice & Manchurian", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" }
+    }
+},
+
+sun: {
+    basic: {
+        b: { text: "Vegetable Chowmein", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Rice with Chicken or Paneer", img: "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Chole Bhature", img: "https://images.unsplash.com/photo-1626132647523-66a0c5b6c3a3?auto=format&fit=crop&w=600&q=80" }
+    },
+    executive: {
+        b: { text: "Paneer Chowmein", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Dum Biryani", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Chole Bhature with Lassi", img: "https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=600&q=80" }
+    },
+    deluxe: {
+        b: { text: "Chowmein, Juice & Fruits", img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Premium Biryani Meal", img: "https://images.unsplash.com/photo-1604908176997-431c1b6f6b06?auto=format&fit=crop&w=600&q=80" },
+        d: { text: "Chole Bhature Dessert", img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=600&q=80" }
+    }
+}
+};
+
+       function highlightBestPlan() {
+    document.getElementById('plan-basic').classList.remove('ring-4','ring-red-500');
+    document.getElementById('plan-executive').classList.remove('ring-4','ring-red-500');
+    document.getElementById('plan-deluxe').classList.remove('ring-4','ring-red-500');
+
+    document.getElementById('plan-executive').classList.add('ring-4','ring-red-500');
+} 
+
+function updatePlanPrices() {
+    document.getElementById('price-basic').innerHTML =
+        `₹${getPrice('basic', mealFilter)} <span class="text-sm text-slate-500">/month</span>`;
+
+    document.getElementById('price-executive').innerHTML =
+        `₹${getPrice('executive', mealFilter)} <span class="text-sm text-slate-500">/month</span>`;
+
+    document.getElementById('price-deluxe').innerHTML =
+        `₹${getPrice('deluxe', mealFilter)} <span class="text-sm text-slate-500">/month</span>`;
+}
+
+function orderNow(tier) {
+    const price = getPrice(tier, mealFilter);
+
+    const mealMap = {
+        all: "Full Day",
+        ld: "Lunch + Dinner",
+        l: "Lunch Only",
+        d: "Dinner Only"
+    };
+
+    const message = `Hi, I want to subscribe.
+
+Plan: ${tier.toUpperCase()}
+Meal Type: ${mealMap[mealFilter]}
+Price: ₹${price}/month
+
+Please guide me further.`;
+
+    const phone = "916206458231";
+
+    const encodedMessage = encodeURIComponent(message);
+
+    window.open(`https://wa.me/${phone}?text=${encodedMessage}`, "_blank");
+}
+
+       function switchTier(tier) {
+    currentTier = tier;
+
+    document.getElementById('btn-basic').classList.remove('tab-active');
+    document.getElementById('btn-executive').classList.remove('tab-active');
+    document.getElementById('btn-deluxe').classList.remove('tab-active');
+
+    document.getElementById('btn-' + tier).classList.add('tab-active');
+
+    updateMenuDisplay();
+	updatePriceDisplay();
+	updatePlanPrices();
+	updateSelectionSummary();
+	updatePlanTypeText();
+}
+
+        function changeDay(day, el) {
+    currentDay = day;
+
+    document.querySelectorAll('.day-btn').forEach(btn => btn.classList.remove('tab-active'));
+    el.classList.add('tab-active');
+
+    updateMenuDisplay();
+}
 
         function updateMenuDisplay() {
-            const display = document.getElementById('menu-display');
-            const meals = menu[currentDay][currentTier];
-            
-            display.innerHTML = `
-                <div class="menu-card bg-white rounded-3xl overflow-hidden">
-                    <img src="${mealImages.b}" class="h-48 w-full object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Breakfast</span>
-                        <h4 class="text-xl font-bold mt-2">${meals.b}</h4>
-                    </div>
-                </div>
-                <div class="menu-card bg-white rounded-3xl overflow-hidden shadow-xl scale-105 border-red-200">
-                    <img src="${mealImages.l}" class="h-48 w-full object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Lunch</span>
-                        <h4 class="text-xl font-bold mt-2">${meals.l}</h4>
-                    </div>
-                </div>
-                <div class="menu-card bg-white rounded-3xl overflow-hidden">
-                    <img src="${mealImages.d}" class="h-48 w-full object-cover">
-                    <div class="p-6">
-                        <span class="text-xs font-bold text-red-500 uppercase tracking-widest">Dinner</span>
-                        <h4 class="text-xl font-bold mt-2">${meals.d}</h4>
-                    </div>
-                </div>
-            `;
-        }
+    const display = document.getElementById('menu-display');
+    const meals = menu[currentDay][currentTier];
+
+    let cards = '';
+
+    // Breakfast (only in full day)
+    if (mealFilter === 'all') {
+        cards += `
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+            <img src="${meals.b.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
+            <div class="p-4">
+                <span class="text-xs font-bold text-red-500 uppercase">Breakfast</span>
+                <h4 class="text-lg font-bold mt-2">${meals.b.text}</h4>
+            </div>
+        </div>`;
+    }
+
+    // Lunch
+    if (mealFilter === 'all' || mealFilter === 'l' || mealFilter === 'ld') {
+        cards += `
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+            <img src="${meals.l.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
+            <div class="p-4">
+                <span class="text-xs font-bold text-red-500 uppercase">Lunch</span>
+                <h4 class="text-lg font-bold mt-2">${meals.l.text}</h4>
+            </div>
+        </div>`;
+    }
+
+    // Dinner
+    if (mealFilter === 'all' || mealFilter === 'd' || mealFilter === 'ld') {
+        cards += `
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+            <img src="${meals.d.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
+            <div class="p-4">
+                <span class="text-xs font-bold text-red-500 uppercase">Dinner</span>
+                <h4 class="text-lg font-bold mt-2">${meals.d.text}</h4>
+            </div>
+        </div>`;
+    }
+
+    display.innerHTML = cards;
+	updatePriceDisplay();
+	updatePlanPrices();
+	updateSelectionSummary();
+	updatePlanTypeText();
+}
 
         // Init
         updateMenuDisplay();
+		highlightBestPlan();
+		updatePriceDisplay();
+		updatePlanPrices();
+		updateSelectionSummary();
+		updatePlanTypeText();
+		
 		document.getElementById('menu-btn').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');
 });
+
+
     </script>
 </body>
 </html>
