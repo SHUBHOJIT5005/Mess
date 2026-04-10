@@ -16,7 +16,39 @@
         .tab-active { background: #dc2626; color: white; border-color: #dc2626; }
         .tier-toggle { transition: 0.3s; }
         .hidden-tier { display: none; }
+		
+		#plans .flex {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#plans .flex::-webkit-scrollbar {
+    display: none;
+}
+	
+	#plans .flex {
+    scroll-padding-left: 1rem;
+    scroll-padding-right: 1rem;
+	}
+	
+	#plans .flex {
+    padding-bottom: 20px;
+}
+	
+	#menu-display {
+    -ms-overflow-style: none;  /* IE & Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+#menu-display::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari */
+}
+
+
+
+
     </style>
+	
 </head>
 <body class="bg-[#FCFBFA] text-slate-800">
 
@@ -120,7 +152,7 @@
 </div>
 
 <!-- Menu Cards -->
-<div id="menu-display" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-4">
+<div id="menu-display" class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto md:overflow-visible pb-4 pt-4 px-4">
             
             <div class="mt-16 bg-red-50 p-6 rounded-3xl flex items-center justify-between flex-wrap gap-4 border border-red-100">
                 <div class="flex items-center space-x-4">
@@ -136,9 +168,11 @@
     <section id="plans" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <h2 class="text-4xl font-bold text-center mb-16">Choose Your Smart Plan</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="flex md:grid md:grid-cols-3 gap-8 max-w-6xl mx-auto 
+overflow-x-auto overflow-y-visible md:overflow-visible px-4 py-6 
+snap-x snap-mandatory scroll-smooth">
                 <!-- Basic Plan -->
-                <div id="plan-basic" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group">
+                <div id="plan-basic" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group min-w-[85%] sm:min-w-[75%] md:min-w-0 snap-center mb-4">
                     <h3 class="text-2xl font-bold mb-4 italic">Basic (Daily Comfort)</h3>
 					<p id="price-basic" class="text-4xl font-bold text-red-600 mb-2">
     ₹3000 <span class="text-sm text-slate-500">/month</span>
@@ -168,7 +202,7 @@
                     <button onclick="orderNow('basic')" class="w-full py-4 rounded-2xl bg-slate-100 text-slate-900 font-bold group-hover:bg-slate-900 group-hover:text-white transition uppercase tracking-widest text-sm">Subscribe Now</button>
                 </div>
                 <!-- Executive Plan -->
-                <div id="plan-executive" class="bg-white p-10 rounded-[2.5rem] border-2 border-red-500 shadow-2xl relative overflow-hidden group">
+                <div id="plan-executive" class="bg-white p-10 rounded-[2.5rem] border-2 border-red-500 shadow-2xl relative overflow-hidden group min-w-[85%] sm:min-w-[75%] md:min-w-0 snap-center mb-4">
                     <div class="absolute top-0 right-0 bg-red-500 text-white px-4 md:px-6 py-2 rounded-bl-2xl font-bold text-xs uppercase">Bestseller</div>
                     <h3 class="text-2xl font-bold mb-4 italic">Executive (The Royal Feast)</h3>
 					<p id="price-executive" class="text-4xl font-bold text-red-600 mb-2">
@@ -200,7 +234,7 @@
                 </div>
 				
 				<!-- Deluxe Plan -->
-				<div id="plan-deluxe" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group">
+				<div id="plan-deluxe" class="bg-white p-10 rounded-[2.5rem] border border-slate-200 hover:shadow-2xl transition group min-w-[85%] sm:min-w-[75%] md:min-w-0 snap-center mb-4">
     <h3 class="text-2xl font-bold mb-4 italic">Deluxe (Ultimate Experience)</h3>
 
     <p id="price-deluxe" class="text-4xl font-bold text-red-600 mb-2">
@@ -249,6 +283,188 @@
             </div>
         </div>
     </section>
+	
+	<!-- Who We Serve Section -->
+<section class="py-24 bg-white" id="clientele">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 text-center">
+        
+        <h2 class="text-4xl font-bold mb-6">Who We Serve</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto mb-16">
+            Trusted by students and working professionals across Ranchi’s most active hubs.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-10">
+
+            <!-- Students -->
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200">
+                <div class="text-5xl mb-6">🎓</div>
+                <h3 class="text-2xl font-bold mb-4">Students & Aspirants</h3>
+                <p class="text-slate-600 mb-6">
+                    Serving students from major coaching hubs around Ahirtoli & Lalpur.
+                </p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li>• Narayana Coaching Institute</li>
+                    <li>• Physics Wallah (PW)</li>
+                    <li>• Allen / Resonance type institutes</li>
+                    <li>• Local IAS / SSC / Banking coaching centers</li>
+                </ul>
+            </div>
+
+            <!-- Professionals -->
+            <div class="bg-slate-50 p-10 rounded-3xl border border-slate-200">
+                <div class="text-5xl mb-6">💼</div>
+                <h3 class="text-2xl font-bold mb-4">Working Professionals</h3>
+                <p class="text-slate-600 mb-6">
+                    Daily meal partner for employees working in nearby offices & business hubs.
+                </p>
+                <ul class="text-sm text-slate-500 space-y-2">
+                    <li>• Bank employees (SBI, HDFC, ICICI nearby branches)</li>
+                    <li>• Corporate offices in Lalpur & Main Road</li>
+                    <li>• Startups & private firms</li>
+                    <li>• PG residents & working bachelors</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Trust Line -->
+        <div class="mt-16 text-sm text-slate-500 font-semibold">
+            500+ regular subscribers trust us for their daily meals ❤️
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA Line -->
+<div class="max-w-6xl mx-auto px-4 md:px-6 text-center">
+
+    <p class="mt-12 text-red-600 font-bold">
+        If you're studying or working nearby, chances are we already deliver in your area.
+    </p>
+
+    <div class="mt-8 py-6 bg-slate-50 rounded-2xl">
+        
+        <p class="text-sm text-slate-500 mb-6 font-semibold">
+            Serving students & professionals from:
+        </p>
+
+        <div class="flex justify-center items-center gap-10 flex-wrap">
+            <!-- logos here -->
+        </div>
+
+    </div>
+
+</div>
+
+    <div class="flex justify-center items-center gap-10 flex-wrap">
+
+        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg"
+             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png"
+             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png"
+             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+
+        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png"
+             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+
+    </div>
+
+</div>
+
+<!-- FAQ Section -->
+<section class="py-24 bg-slate-50" id="faq">
+    <div class="max-w-5xl mx-auto px-4 md:px-6">
+        <h2 class="text-4xl font-bold text-center mb-16">Frequently Asked Questions</h2>
+
+        <div class="space-y-6">
+
+            <!-- FAQ Item -->
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    What is included in each plan?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Basic includes home-style meals. Executive includes extra items like raita, sweets, and drinks. Deluxe offers premium variety, larger portions, and priority service.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    Can I choose only lunch or dinner?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Yes, you can choose Full Day, Lunch + Dinner, Lunch Only, or Dinner Only using the filters above.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    Can I pause or skip meals?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Yes. Executive and Deluxe plans allow flexible skipping or pausing. Basic plan may have limited flexibility.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    How is the food prepared?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Meals are prepared fresh daily using quality ingredients, hygienic cooking practices, and FSSAI-approved standards.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    What is the delivery time?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Meals are delivered hot within ~45 minutes of preparation depending on your location.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    Is non-veg available?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Yes, selected days include chicken, egg, or fish options depending on the menu and plan.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    How do I subscribe?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    Simply click "Subscribe Now" or contact us via WhatsApp. Our team will guide you through the process.
+                </p>
+            </div>
+
+            <div class="faq-item border border-slate-200 rounded-2xl p-6 bg-white">
+                <button class="faq-question w-full flex justify-between items-center text-left font-bold text-lg">
+                    Are there any hidden charges?
+                    <span>+</span>
+                </button>
+                <p class="faq-answer hidden mt-4 text-slate-600">
+                    No. All pricing is transparent. You only pay the monthly subscription amount shown.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer id="contact" class="bg-slate-900 text-white py-20 px-4 md:px-6">
@@ -339,13 +555,12 @@ function calculateSavings(tier) {
 
 function updatePriceDisplay() {
     const price = getPrice(currentTier, mealFilter);
-    const savings = calculateSavings(currentTier);
-
     let text = `₹${price} / month`;
 
-    if (mealFilter === 'all' && savings >= 0) {
-	text += `  (~₹${Math.round(price/30)}/day)`;
-}
+// Per day calculation (works for all meal types)
+const perDay = price / 30;
+
+text += ` (~₹${Math.round(perDay)}/day)`;
 
     document.getElementById('dynamic-price').innerText = text;
 }
@@ -379,9 +594,9 @@ function updateSelectionSummary() {
         const menu = {
 mon: {
     basic: {
-        b: { text: "Idli with Coconut Chutney", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
-        l: { text: "Steamed Rice, Dal Tadka, Seasonal Vegetable", img: "https://res.cloudinary.com/dikxsik7r/image/upload/q_auto/f_auto/v1775749661/1775749410166_gwk06y.png" },
-        d: { text: "Roti with Paneer Masala", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+        b: { text: "Idli with Coconut Chutney", qty: "2 Idlis", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Steamed Rice, Dal Tadka, Seasonal Vegetable", qty: "1 bowl Rice", img: "https://res.cloudinary.com/dikxsik7r/image/upload/q_auto/f_auto/v1775749661/1775749410166_gwk06y.png" },
+        d: { text: "Roti with Paneer Masala", qty: "5 Rotis", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
     },
     executive: {
         b: { text: "Idli, Medu Vada & Sambar", img: "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" },
@@ -582,11 +797,12 @@ Please guide me further.`;
     // Breakfast (only in full day)
     if (mealFilter === 'all') {
         cards += `
-        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md mt-2">
             <img src="${meals.b.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Breakfast</span>
                 <h4 class="text-lg font-bold mt-2">${meals.b.text}</h4>
+				<p class="text-xs text-slate-500 mt-1">${meals.b.qty || ""}</p>
             </div>
         </div>`;
     }
@@ -594,11 +810,12 @@ Please guide me further.`;
     // Lunch
     if (mealFilter === 'all' || mealFilter === 'l' || mealFilter === 'ld') {
         cards += `
-        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md mt-2">
             <img src="${meals.l.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Lunch</span>
                 <h4 class="text-lg font-bold mt-2">${meals.l.text}</h4>
+				<p class="text-xs text-slate-500 mt-1">${meals.l.qty || ""}</p>
             </div>
         </div>`;
     }
@@ -606,11 +823,12 @@ Please guide me further.`;
     // Dinner
     if (mealFilter === 'all' || mealFilter === 'd' || mealFilter === 'ld') {
         cards += `
-        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md">
+        <div class="menu-card min-w-[280px] md:min-w-0 bg-white rounded-3xl p-3 shadow-md mt-2">
             <img src="${meals.d.img}" class="h-48 w-full object-cover rounded-2xl mb-3">
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Dinner</span>
                 <h4 class="text-lg font-bold mt-2">${meals.d.text}</h4>
+				<p class="text-xs text-slate-500 mt-1">${meals.d.qty || ""}</p>
             </div>
         </div>`;
     }
@@ -632,6 +850,21 @@ Please guide me further.`;
 		
 		document.getElementById('menu-btn').addEventListener('click', () => {
     document.getElementById('mobile-menu').classList.toggle('hidden');
+});
+
+// FAQ Toggle
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const answer = btn.nextElementSibling;
+
+        // Close all others
+        document.querySelectorAll('.faq-answer').forEach(a => {
+            if (a !== answer) a.classList.add('hidden');
+        });
+
+        // Toggle current
+        answer.classList.toggle('hidden');
+    });
 });
 
 
