@@ -25,6 +25,56 @@
 #plans .flex::-webkit-scrollbar {
     display: none;
 }
+
+/* DAY buttons */
+.day-btn {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.day-btn:hover {
+    border-color: #dc2626;
+}
+
+/* ACTIVE state */
+.day-btn.tab-active {
+    background-color: #dc2626 !important;
+    color: white !important;
+    border-color: #dc2626 !important;
+    box-shadow: 0 6px 14px rgba(220, 38, 38, 0.25);
+    transform: translateY(-1px);
+}
+
+.portion-btn {
+    background: #fff;
+    border-color: #e2e8f0;
+    transition: all 0.25s ease;
+    min-width: 90px;
+}
+
+.portion-btn:hover {
+    transform: translateY(-2px);
+    border-color: #dc2626;
+}
+
+.portion-btn.tab-active {
+    background-color: #dc2626 !important;
+    color: white !important;
+    border-color: #dc2626 !important;
+}
+
+.portion-btn.tab-active span {
+    color: rgba(255,255,255,0.8);
+}
+
+/* MEAL buttons (less important) */
+.meal-filter {
+    background: #f1f5f9;
+    font-weight: 600;
+    opacity: 1;
+}
 	
 	#plans .flex {
     scroll-padding-left: 1rem;
@@ -42,6 +92,58 @@
 
 #menu-display::-webkit-scrollbar {
     display: none;             /* Chrome, Safari */
+}
+
+/* FORCE active day button style */
+button.day-btn.tab-active {
+    background: #dc2626 !important;
+    color: #ffffff !important;
+    border: 1px solid #dc2626 !important;
+}
+
+/* ACTIVE STATE — universal fix */
+button.tab-active {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border-color: #dc2626 !important;
+}
+
+/* LOGO RIBBON */
+.logo-ribbon {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+}
+
+.logo-track {
+    display: flex;
+    gap: 60px;
+    width: max-content;
+    white-space: nowrap;
+    animation: scrollLogos 30s linear infinite;
+}
+
+.logo-track img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.logo-track img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-25%);
+    }
 }
 
 
@@ -112,7 +214,7 @@
     </section>
 
     <!-- Menu Section -->
-    <section id="menu" class="py-24 bg-white">
+    <section id="menu" class="py-24 bg-gradient-to-b from-white via-slate-50 to-slate-100">
         <div class="max-w-7xl mx-auto px-4 md:px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-6">Explore the Weekly Menu</h2>
@@ -129,26 +231,63 @@
                 </div>
 
                 <!-- Day Selector -->
-                <div class="flex flex-wrap justify-center gap-2 md:gap-4 overflow-x-auto pb-2" id="day-tabs">
-                    <button onclick="changeDay('mon', this)" class="day-btn tab-active px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
+                <div class="flex justify-center">
+    <div class="bg-white border border-slate-200 rounded-2xl px-4 py-4 shadow-sm inline-flex flex-wrap justify-center gap-2 md:gap-4">
+        
+        <!-- KEEP YOUR DAY BUTTONS HERE -->
+		<button onclick="changeDay('mon', this)" class="day-btn tab-active px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Mon</button>
                     <button onclick="changeDay('tue', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Tue</button>
                     <button onclick="changeDay('wed', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Wed</button>
                     <button onclick="changeDay('thu', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Thu</button>
                     <button onclick="changeDay('fri', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Fri</button>
                     <button onclick="changeDay('sat', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sat</button>
                     <button onclick="changeDay('sun', this)" class="day-btn px-4 md:px-6 py-2 rounded-full border border-slate-200 font-bold text-sm transition uppercase">Sun</button>
-                </div>
-            </div>
 
-<!-- Meal Filter Buttons -->
-<div id="dynamic-price" class="text-center text-2xl font-bold text-red-600 mt-4"></div>
-<div id="selection-summary" class="text-center text-sm text-slate-600 mt-2 font-semibold"></div>
+    </div>
+</div>
+                    
+ <div class="w-24 h-[3px] bg-red-300 mx-auto my-10 rounded-full opacity-60"></div>
+				
+				
 
-<div class="flex justify-center gap-3 mb-8 flex-wrap">
-    <button onclick="setMealFilter('all', this)" class="meal-filter tab-active px-4 py-2 rounded-full border font-bold text-sm">Full Day</button>
-	<button onclick="setMealFilter('ld', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch + Dinner</button>
-    <button onclick="setMealFilter('l', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch Only</button>
-    <button onclick="setMealFilter('d', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Dinner Only</button>
+<div class="mt-10 max-w-2xl mx-auto bg-white border border-red-100 rounded-3xl shadow-2xl p-6 md:p-8">
+
+    <!-- Portion -->
+<div class="mb-6 text-center">
+    
+   
+
+    <div class="flex justify-center gap-3">
+        
+        <button onclick="setPortion('full', this)" 
+    class="portion-btn tab-active px-6 py-3 rounded-xl border font-bold text-sm flex flex-col items-center">
+    
+    Full Portion
+
+</button>
+
+        <button onclick="setPortion('half', this)" 
+    class="portion-btn px-6 py-3 rounded-xl border font-bold text-sm flex flex-col items-center">
+    
+    Half Portion
+
+</button>
+
+    </div>
+</div>
+
+    <!-- Price -->
+    <div id="dynamic-price" class="text-center text-3xl font-bold text-red-600 mb-2"></div>
+    <div id="selection-summary" class="text-center text-sm text-slate-500 mb-6 font-semibold"></div>
+
+    <!-- Meal Filters -->
+    <div class="flex justify-center gap-3 flex-wrap">
+        <button onclick="setMealFilter('all', this)" class="meal-filter tab-active px-4 py-2 rounded-full border font-bold text-sm">Full Day</button>
+        <button onclick="setMealFilter('ld', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch + Dinner</button>
+        <button onclick="setMealFilter('l', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Lunch Only</button>
+        <button onclick="setMealFilter('d', this)" class="meal-filter px-4 py-2 rounded-full border font-bold text-sm">Dinner Only</button>
+    </div>
+
 </div>
 
 <!-- Menu Cards -->
@@ -348,31 +487,43 @@ snap-x snap-mandatory scroll-smooth">
             Serving students & professionals from:
         </p>
 
-        <div class="flex justify-center items-center gap-10 flex-wrap">
-            <!-- logos here -->
-        </div>
+        
 
     </div>
 
 </div>
 
-    <div class="flex justify-center items-center gap-10 flex-wrap">
+<div class="logo-ribbon">
+    <div class="logo-track">
 
-        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg"
-             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+        <!-- SET 1 -->
+        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg">
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png">
+        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png">
 
-        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png"
-             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
-
-        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png"
-             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
-
-        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png"
-             class="h-10 w-auto max-w-[120px] object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 hover:scale-110 transition duration-300">
+        <!-- SET 2 (duplicate) -->
+        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg">
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png">
+        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png">
+		
+		<!-- SET 3 (duplicate) -->
+        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg">
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png">
+        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png">
+		
+		<!-- SET 4 (duplicate) -->
+        <img src="https://studyathome.org/wp-content/uploads/2022/12/Picture1.jpg">
+        <img src="https://1000logos.net/wp-content/uploads/2018/03/SBI-Logo.png">
+        <img src="https://1000logos.net/wp-content/uploads/2021/06/HDFC-Bank-logo.png">
+        <img src="https://getvectorlogo.com/wp-content/uploads/2018/12/icici-bank-vector-logo.png">
 
     </div>
-
 </div>
+
+
 
 <!-- FAQ Section -->
 <section class="py-24 bg-slate-50" id="faq">
@@ -502,8 +653,24 @@ snap-x snap-mandatory scroll-smooth">
     <script>
         let currentTier = 'basic';
         let currentDay = 'mon';
+		let portion = 'full';
 		
 		let mealFilter = 'all';
+		
+		const pricing = {
+    basic: {
+        full: { all: 3000, ld: 2200, l: 1500, d: 1500 },
+        half: { all: 2100, ld: 1600, l: 1100, d: 1100 }
+    },
+    executive: {
+        full: { all: 3600, ld: 3000, l: 2000, d: 2000 },
+        half: { all: 2600, ld: 2200, l: 1500, d: 1500 }
+    },
+    deluxe: {
+        full: { all: 4500, ld: 3800, l: 2500, d: 2500 },
+        half: { all: 3200, ld: 2700, l: 1800, d: 1800 }
+    }
+};
 
 function setMealFilter(type, el) {
     mealFilter = type;
@@ -518,29 +685,9 @@ function setMealFilter(type, el) {
 	updatePlanTypeText();
 }
 
-function getPrice(tier, mealType) {
-    const pricing = {
-        basic: {
-            all: 3000,
-            ld: 2200,
-            l: 1500,
-            d: 1500
-        },
-        executive: {
-            all: 3600,   // cheaper than 1950+1950
-            ld: 3000,
-            l: 2000,
-            d: 2000
-        },
-        deluxe: {
-            all: 4500,
-            ld: 3800,
-            l: 2500,
-            d: 2500
-        }
-    };
 
-    return pricing[tier][mealType];
+function getPrice(tier, mealType) {
+    return pricing[tier][portion][mealType];
 }
 
 function calculateSavings(tier) {
@@ -586,7 +733,9 @@ function updateSelectionSummary() {
         d: "Dinner Only"
     };
 
-    const text = `Selected: ${currentTier.toUpperCase()} • ${mealMap[mealFilter]}`;
+    const portionText = portion === 'half' ? "Half" : "Full";
+
+    const text = `Selected: ${currentTier.toUpperCase()} • ${mealMap[mealFilter]} • ${portionText} Portion`;
 
     document.getElementById('selection-summary').innerText = text;
 }
@@ -727,6 +876,17 @@ sun: {
     document.getElementById('plan-executive').classList.add('ring-4','ring-red-500');
 } 
 
+function setPortion(type, el) {
+    portion = type;
+
+    document.querySelectorAll('.portion-btn').forEach(btn => btn.classList.remove('tab-active'));
+    el.classList.add('tab-active');
+
+    updatePriceDisplay();
+    updatePlanPrices();
+    updateSelectionSummary();
+}
+
 function updatePlanPrices() {
     document.getElementById('price-basic').innerHTML =
         `₹${getPrice('basic', mealFilter)} <span class="text-sm text-slate-500">/month</span>`;
@@ -747,11 +907,14 @@ function orderNow(tier) {
         l: "Lunch Only",
         d: "Dinner Only"
     };
+	
+	const portionText = portion === 'half' ? "Half Portion" : "Full Portion";
 
     const message = `Hi, I want to subscribe.
 
 Plan: ${tier.toUpperCase()}
 Meal Type: ${mealMap[mealFilter]}
+Portion: ${portionText}
 Price: ₹${price}/month
 
 Please guide me further.`;
@@ -802,7 +965,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Breakfast</span>
                 <h4 class="text-lg font-bold mt-2">${meals.b.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${meals.b.qty || ""}</p>
+				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
             </div>
         </div>`;
     }
@@ -815,7 +978,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Lunch</span>
                 <h4 class="text-lg font-bold mt-2">${meals.l.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${meals.l.qty || ""}</p>
+				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
             </div>
         </div>`;
     }
@@ -828,7 +991,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Dinner</span>
                 <h4 class="text-lg font-bold mt-2">${meals.d.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${meals.d.qty || ""}</p>
+				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
             </div>
         </div>`;
     }
