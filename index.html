@@ -747,9 +747,9 @@ function updateSelectionSummary() {
         const menu = {
 mon: {
     basic: {
-        b: { text: "Idli with Coconut Chutney", qty: "2 Idlis", img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
-        l: { text: "Steamed Rice, Dal Tadka, Seasonal Vegetable", qty: "1 bowl Rice", img: "https://res.cloudinary.com/dikxsik7r/image/upload/q_auto/f_auto/v1775749661/1775749410166_gwk06y.png" },
-        d: { text: "Roti with Paneer Masala", qty: "5 Rotis", img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
+        b: { text: "Idli with Coconut Chutney", qty: { full: "4 Idlis", half: "2 Idlis" }, img: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80" },
+        l: { text: "Steamed Rice, Dal Tadka, Seasonal Vegetable", qty: { full: "1 Bowl Rice", half: "Half Bowl Rice" }, img: "https://res.cloudinary.com/dikxsik7r/image/upload/q_auto/f_auto/v1775749661/1775749410166_gwk06y.png" },
+        d: { text: "Roti with Paneer Masala", qty: { full: "5 Rotis", half: "3 Rotis" }, img: "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?auto=format&fit=crop&w=600&q=80" }
     },
     executive: {
         b: { text: "Idli, Medu Vada & Sambar", img: "https://images.unsplash.com/photo-1617196034183-421b4917c92d?auto=format&fit=crop&w=600&q=80" },
@@ -885,6 +885,8 @@ function setPortion(type, el) {
 
     document.querySelectorAll('.portion-btn').forEach(btn => btn.classList.remove('tab-active'));
     el.classList.add('tab-active');
+	
+	updateMenuDisplay();
 
     updatePriceDisplay();
     updatePlanPrices();
@@ -969,7 +971,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Breakfast</span>
                 <h4 class="text-lg font-bold mt-2">${meals.b.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
+				<p class="text-xs text-slate-500 mt-1">${meals.b.qty ? meals.b.qty[portion] : ""}</p>
             </div>
         </div>`;
     }
@@ -982,7 +984,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Lunch</span>
                 <h4 class="text-lg font-bold mt-2">${meals.l.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
+				<p class="text-xs text-slate-500 mt-1">${meals.l.qty ? meals.l.qty[portion] : ""}</p>
             </div>
         </div>`;
     }
@@ -995,7 +997,7 @@ Please guide me further.`;
             <div class="p-4">
                 <span class="text-xs font-bold text-red-500 uppercase">Dinner</span>
                 <h4 class="text-lg font-bold mt-2">${meals.d.text}</h4>
-				<p class="text-xs text-slate-500 mt-1">${portion === 'half' ? 'Half Portion' : (meals.l.qty || "")}</p>
+				<p class="text-xs text-slate-500 mt-1">${meals.d.qty ? meals.d.qty[portion] : ""}</p>
             </div>
         </div>`;
     }
